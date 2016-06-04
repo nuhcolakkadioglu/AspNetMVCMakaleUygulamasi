@@ -9,6 +9,13 @@ namespace PostApp.Data.UnitofWork
     public interface IUnitofWork:IDisposable
     {
 
+        int SaveChanges();
+
+        void BeginTransaction();
+
+        void Commit();
+
+        void Rollback();
 
     }
 }
