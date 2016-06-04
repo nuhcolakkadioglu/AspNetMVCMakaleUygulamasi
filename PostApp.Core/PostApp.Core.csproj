@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F3424A8A-BB2A-4084-A86C-EDCB1A4EEA55}</ProjectGuid>
+    <ProjectGuid>{7A40665E-744F-418C-A90A-841FB726DF78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PostApp.Core</RootNamespace>
