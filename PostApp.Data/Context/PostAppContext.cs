@@ -14,11 +14,20 @@ namespace PostApp.Data.Context
 
         public PostAppContext() : base("name=PostAppEntities")
         {
-
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Post> Post { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().ToTable("User");
+            modelBuilder.Entity<Post>().ToTable("Post");
+            modelBuilder.Entity<Category>().ToTable("Category");
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
