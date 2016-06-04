@@ -19,9 +19,18 @@ namespace PostApp.Data.GenericRepository
             _dbSet = context.Set<T>();
         }
 
+      public  IGenericRepository<T> GetRepository<T>() where T : class
+        {
+            return new GenericRepository<T>(_context);
+        }
+
+
         public void Delete(T model)
         {
+
+            if(_context.Entry(model).State==EntityState.Detached)
             _dbSet.Attach(model);
+
             _dbSet.Remove(model);
         }
 
