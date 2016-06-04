@@ -56,6 +56,8 @@ namespace PostApp.Data.UnitofWork
                     _context.Dispose();
                 }
             }
+
+            this.disposed = true;
         }
 
         public void Dispose()
