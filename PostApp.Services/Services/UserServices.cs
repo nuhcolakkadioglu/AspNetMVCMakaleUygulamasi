@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using PostApp.Core.Entities;
 using PostApp.Data.GenericRepository;
 using PostApp.Data.UnitofWork;
-using AutoMapper;
 using PostApp.DTO.EEntity;
 
 namespace PostApp.Services.Services
@@ -34,7 +33,7 @@ namespace PostApp.Services.Services
         public void Update(EUserDTO user)
         {
             var entity = _userRepository.Find(user.Id);
-            Mapper.Map(user, entity);
+            AutoMapper.Mapper.DynamicMap(user, entity);
             _userRepository.Update(entity);
         }
     }
