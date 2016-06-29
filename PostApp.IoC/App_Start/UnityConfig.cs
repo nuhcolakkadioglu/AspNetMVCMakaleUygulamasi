@@ -3,6 +3,9 @@ using Microsoft.Practices.Unity;
 using Unity.Mvc5;
 using PostApp.Core.Entities;
 using PostApp.Data.GenericRepository;
+using PostApp.Data.UnitofWork;
+using PostApp.Services.Interfaces;
+using PostApp.Services.Services;
 
 namespace PostApp.IoC
 {
@@ -20,12 +23,12 @@ namespace PostApp.IoC
             // it is NOT necessary to register your controllers
 
             // e.g. container.RegisterType<ITestService, TestService>();
-
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }
 
         public static void RegisterTypes(IUnityContainer container)
         {
+            container.BindInRequestScope<IUnitofWork, UnitofWork>();
+            container.BindInRequestScope<IUserServices, UserServices>();
             container.BindInRequestScope<IGenericRepository<User>, IGenericRepository<User>>();
             container.BindInRequestScope<IGenericRepository<Post>, IGenericRepository<Post>>();
             container.BindInRequestScope<IGenericRepository<Category>, IGenericRepository<Category>>();

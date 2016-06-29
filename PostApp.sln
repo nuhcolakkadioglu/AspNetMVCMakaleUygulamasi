@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.Services", "PostApp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.Utilities", "PostApp.Utilities\PostApp.Utilities.csproj", "{B5A5F132-49BA-445F-8E66-A2E4F4CF7CE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.Web", "PostApp.Web\PostApp.Web.csproj", "{5113DF92-F839-4C8C-815D-8F8278E0A1C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{B5A5F132-49BA-445F-8E66-A2E4F4CF7CE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5A5F132-49BA-445F-8E66-A2E4F4CF7CE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5A5F132-49BA-445F-8E66-A2E4F4CF7CE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5113DF92-F839-4C8C-815D-8F8278E0A1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5113DF92-F839-4C8C-815D-8F8278E0A1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5113DF92-F839-4C8C-815D-8F8278E0A1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5113DF92-F839-4C8C-815D-8F8278E0A1C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

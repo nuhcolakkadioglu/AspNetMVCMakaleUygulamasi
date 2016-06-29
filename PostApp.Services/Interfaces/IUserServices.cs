@@ -1,4 +1,5 @@
 ﻿using PostApp.Core.Entities;
+using PostApp.DTO.EEntity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace PostApp.Services.Interfaces
     public interface IUserServices
     {
 
-        void Update(User user);
+        void Update(EUserDTO user);
         void GetUserByUserNameAndPassword(string username,string password);
     }
 }

@@ -64,6 +64,7 @@
       <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
       <Private>True</Private>
@@ -102,6 +103,10 @@
     <ProjectReference Include="..\PostApp.Data\PostApp.Data.csproj">
       <Project>{077211fe-cc44-4d95-84eb-adfcf8921a93}</Project>
       <Name>PostApp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PostApp.Services\PostApp.Services.csproj">
+      <Project>{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}</Project>
+      <Name>PostApp.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
