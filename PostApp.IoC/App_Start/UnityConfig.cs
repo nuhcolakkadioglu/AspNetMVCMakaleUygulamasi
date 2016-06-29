@@ -10,7 +10,10 @@ namespace PostApp.IoC
     {
         public static void RegisterComponents()
         {
-			var container = new UnityContainer();
+            //PM> Install-package Unity
+            //PM> Install-package Unity.mvc5
+
+            var container = new UnityContainer();
             RegisterTypes(container);
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
             // register all your components with the container here

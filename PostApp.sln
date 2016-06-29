@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.DTO", "PostApp.DTO\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.IoC", "PostApp.IoC\PostApp.IoC.csproj", "{43E47346-4BF4-412D-9B8C-EB00E988A6A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostApp.Services", "PostApp.Services\PostApp.Services.csproj", "{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{43E47346-4BF4-412D-9B8C-EB00E988A6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43E47346-4BF4-412D-9B8C-EB00E988A6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43E47346-4BF4-412D-9B8C-EB00E988A6A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B9C8022-4EEF-4AA3-91F1-709FCF7BA905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
