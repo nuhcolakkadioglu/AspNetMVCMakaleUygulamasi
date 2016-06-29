@@ -12,6 +12,9 @@ namespace PostApp.Data.UnitofWork
     {
         private readonly PostAppContext _context;
         private bool disposed = false;
+        DbContextTransaction transaction;
+
+
         public UnitofWork(PostAppContext context)
         {
             Database.SetInitializer<PostAppContext>(null);
@@ -39,12 +42,12 @@ namespace PostApp.Data.UnitofWork
 
         public void BeginTransaction()
         {
-            _context.Database.BeginTransaction();
+            transaction = _context.Database.BeginTransaction();
         }
 
         public void Commit()
         {
-            Commit();
+            transaction.Commit();
         }
 
         public virtual void Dispose(bool disposing)
@@ -68,7 +71,7 @@ namespace PostApp.Data.UnitofWork
 
         public void Rollback()
         {
-            Rollback();
+            transaction.Rollback();
         }
 
 
