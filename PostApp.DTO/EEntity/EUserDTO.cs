@@ -8,6 +8,6 @@ namespace PostApp.DTO.EEntity
 {
    public class EUserDTO
     {
-
+        
     }
 }

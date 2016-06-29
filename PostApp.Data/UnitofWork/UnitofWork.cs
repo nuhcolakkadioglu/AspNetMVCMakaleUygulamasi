@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PostApp.Data.GenericRepository;
 
 namespace PostApp.Data.UnitofWork
 {
@@ -74,6 +75,9 @@ namespace PostApp.Data.UnitofWork
             transaction.Rollback();
         }
 
-
+        public IGenericRepository<T> GetRepository<T>() where T : class
+        {
+            return new GenericRepository<T>(_context);
+        }
     }
 }

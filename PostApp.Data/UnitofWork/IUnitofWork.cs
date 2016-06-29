@@ -9,7 +9,7 @@ namespace PostApp.Data.UnitofWork
 {
     public interface IUnitofWork:IDisposable
     {
-       // IGenericRepository<T> GetRepository<T>() where T : class;
+        IGenericRepository<T> GetRepository<T>() where T : class;
 
         int SaveChanges();
 
