@@ -23,9 +23,9 @@ namespace PostApp.Data.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().ToTable("User");
-            modelBuilder.Entity<Post>().ToTable("Post");
-            modelBuilder.Entity<Category>().ToTable("Category");
+            modelBuilder.Entity<User>().ToTable("User","dbo");
+            modelBuilder.Entity<Post>().ToTable("Post", "dbo");
+            modelBuilder.Entity<Category>().ToTable("Category", "dbo");
 
             base.OnModelCreating(modelBuilder);
         }
