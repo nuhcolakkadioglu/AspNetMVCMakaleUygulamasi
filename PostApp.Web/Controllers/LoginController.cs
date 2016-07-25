@@ -32,8 +32,18 @@ namespace PostApp.Web.Controllers
             if(result==null)
             return Json("/", JsonRequestBehavior.AllowGet);
             else
-                return Json("/Manager", JsonRequestBehavior.AllowGet);
+            {
+                Session["user"] = result;
 
+                return Json("/Manager", JsonRequestBehavior.AllowGet);
+            }
+
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            return Json("", JsonRequestBehavior.AllowGet);
         }
 
     }
