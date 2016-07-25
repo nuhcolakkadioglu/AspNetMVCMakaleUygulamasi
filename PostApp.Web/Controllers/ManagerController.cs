@@ -22,14 +22,14 @@ namespace PostApp.Web.Controllers
 
         public ActionResult Index()
         {
-            _userService.Update(new EUserDTO {
-                Id = 1,
-                FullName = "Nuh Ç.",
-                Job = "Csharp yazılım uz",
-                Password = "1a1a1",
-                UserName="nuh"
-            });
-            _uow.SaveChanges();
+            //_userService.Update(new EUserDTO {
+            //    Id = 1,
+            //    FullName = "Nuh Ç.",
+            //    Job = "Csharp yazılım uz",
+            //    Password = "1a1a1",
+            //    UserName="nuh"
+            //});
+            //_uow.SaveChanges();
             return View();
         }
        

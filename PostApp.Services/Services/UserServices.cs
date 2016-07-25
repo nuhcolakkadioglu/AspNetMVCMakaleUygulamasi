@@ -17,17 +17,21 @@ namespace PostApp.Services.Services
 
         private readonly IGenericRepository<User> _userRepository;
         private readonly IUnitofWork _uow;
-        
+        private readonly EUserDTO _userDTO;
+
         public UserServices(UnitofWork uow)
         {
             _uow = uow;
             _userRepository = _uow.GetRepository<User>();
+            _userDTO = new EUserDTO();
         }
 
-        public void GetUserByUserNameAndPassword(string username, string password)
+        public EUserDTO GetUserByUserNameAndPassword(string username, string password)
         {
             var control = _userRepository.GetAll().Where(m => m.UserName == username && m.Password == password).SingleOrDefault();
+            AutoMapper.Mapper.DynamicMap(control,_userDTO);
 
+            return _userDTO;
         }
 
         public void Update(EUserDTO user)

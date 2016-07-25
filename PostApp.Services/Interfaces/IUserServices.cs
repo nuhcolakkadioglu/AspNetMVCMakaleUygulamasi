@@ -12,6 +12,6 @@ namespace PostApp.Services.Interfaces
     {
 
         void Update(EUserDTO user);
-        void GetUserByUserNameAndPassword(string username,string password);
+        EUserDTO GetUserByUserNameAndPassword(string username,string password);
     }
 }

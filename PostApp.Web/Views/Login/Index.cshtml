@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "User Login";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="container" id="formContainer">
+
+            <form class="form-signin" id="login" role="form">
+                <h3 class="form-signin-heading">Giriş Ekranı</h3>
+                <a href="#" id="flipToRecover" class="flipLink">
+                    <div id="triangle-topright"></div>
+                </a>
+
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" name="UserName" id="UserName" placeholder="kullanıcı adı" required autofocus>
+                </div>
+
+                <div class="col-lg-3">
+                    <input type="password" class="form-control" name="Password" id="Password" placeholder="şifre" required>
+                </div>
+                <div class="col-lg-3">
+                    <button onclick="LoginControl();" class="btn btn-lg btn-primary btn-block" type="button">Giriş Yap</button>
+                </div>
+
+            </form>
+
+        </div> <!-- /container -->
+    </div>
+</div>
+
+<script>
+    function LoginControl() {
+        var UserName = $('#UserName').val();
+        var Password = $('#Password').val();
+
+        $.ajax({
+            url: "/Login/LoginControl",
+            type: "POST",
+            data: { UserName: UserName, Password: Password },
+            success: function (data) {
+                window.location = data;
+            }
+        });
+
+    }
+</script>
