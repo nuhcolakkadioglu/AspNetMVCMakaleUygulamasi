@@ -41,7 +41,7 @@ namespace PostApp.Web.Controllers
                 return Json("/Manager", JsonRequestBehavior.AllowGet);
             }
             else
-                return Json(null, JsonRequestBehavior.AllowGet);
+                return Json("/", JsonRequestBehavior.AllowGet);
 
 
         }

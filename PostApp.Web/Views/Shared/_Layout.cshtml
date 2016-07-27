@@ -1,11 +1,15 @@
 ﻿@using PostApp.Utilities.SessionOperations
 @{
-    if (Session["SessionContext"] != null)
+    if (Session["SessionContext"] == null)
     {
-        Response.Redirect("/Manager");
+        Response.Redirect("/Login");
     }
 
     var FullName = ((SessionContext)Session["SessionContext"]).FullName;
+    var Job = ((SessionContext)Session["SessionContext"]).Job;
+    var ImageUrl = ((SessionContext)Session["SessionContext"]).ImageUrl;
+
+
 
 }
 
@@ -27,11 +31,11 @@
         <aside class="sm-side">
             <div class="user-head">
                 <a class="inbox-avatar" href="javascript:;">
-                    <img width="64" hieght="60" src="http://bootsnipp.com/img/avatars/ebeb306fd7ec11ab68cbcaa34282158bd80361a7.jpg">
+                    <img width="64" hieght="60" src="@ImageUrl">
                 </a>
                 <div class="user-name">
                     <h5><a href="#">@FullName</a></h5>
-                    <span><a href="#">Info.Ali.Pci@Gmail.com</a></span>
+                    <span><a href="#">@Job</a></span>
                 </div>
                 <a class="mail-dropdown pull-right" href="javascript:;">
                     <i class="fa fa-chevron-down"></i>
