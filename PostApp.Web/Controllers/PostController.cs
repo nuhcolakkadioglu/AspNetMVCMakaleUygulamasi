@@ -9,12 +9,12 @@ using System.Web.Mvc;
 
 namespace PostApp.Web.Controllers
 {
-    public class ManagerController : AdminController
+    public class PostController : AdminController
     {
        private readonly IUserServices _userService;
         private readonly IUnitofWork _uow;
 
-        public ManagerController(IUnitofWork uow, IUserServices userService) :base(uow)
+        public PostController(IUnitofWork uow, IUserServices userService) :base(uow)
         {
             _uow = uow;
             _userService = userService;

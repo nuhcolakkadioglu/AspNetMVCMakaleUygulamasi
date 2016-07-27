@@ -38,10 +38,10 @@ namespace PostApp.Web.Controllers
 
                 Session["SessionContext"] = _sessionContext;
 
-                return Json("/Manager", JsonRequestBehavior.AllowGet);
+                return Json("/Profile", JsonRequestBehavior.AllowGet);
             }
             else
-                return Json("/", JsonRequestBehavior.AllowGet);
+                return Json("", JsonRequestBehavior.AllowGet);
 
 
         }
@@ -49,6 +49,7 @@ namespace PostApp.Web.Controllers
         public ActionResult LogOut()
         {
             Session.Abandon();
+            Response.Redirect("/Login");
             return Json("", JsonRequestBehavior.AllowGet);
         }
 

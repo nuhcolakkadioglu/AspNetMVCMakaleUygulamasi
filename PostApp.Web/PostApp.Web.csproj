@@ -143,7 +143,8 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
-    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Global.asax.cs">
@@ -154,6 +155,8 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\tabpanel.css" />
+    <Content Include="Content\css\profile.css" />
     <Content Include="Content\css\admin.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -183,8 +186,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Manager\Index.cshtml" />
+    <Content Include="Views\Post\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PostApp.Data\PostApp.Data.csproj">
