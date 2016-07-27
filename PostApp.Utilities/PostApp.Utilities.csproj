@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="PassOperations\PassOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionOperations\SessionContext.cs" />
     <Compile Include="StringOperations\StringManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

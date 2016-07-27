@@ -13,5 +13,7 @@ namespace PostApp.Services.Interfaces
 
         void Update(EUserDTO user);
         EUserDTO GetUserByUserNameAndPassword(string username,string password);
+         byte[] GetUserImage(int id);
+
     }
 }

@@ -28,10 +28,18 @@ namespace PostApp.Services.Services
 
         public EUserDTO GetUserByUserNameAndPassword(string username, string password)
         {
-            var control = _userRepository.GetAll().Where(m => m.UserName == username && m.Password == password).SingleOrDefault();
-            AutoMapper.Mapper.DynamicMap(control,_userDTO);
+            var control = (from u in _userRepository.GetAll()
+                           where u.UserName == username && u.Password == password
+                           select new EUserDTO
+                           {
+                               FullName = u.FullName,
+                               Id = u.Id,
+                               Job = u.Job,
+                               UserName = u.UserName,
+                               ImageUrl = "imgview/"+u.Id
+                           }).SingleOrDefault();
 
-            return _userDTO;
+            return control;
         }
 
         public void Update(EUserDTO user)
@@ -39,6 +47,13 @@ namespace PostApp.Services.Services
             var entity = _userRepository.Find(user.Id);
             AutoMapper.Mapper.DynamicMap(user, entity);
             _userRepository.Update(entity);
+        }
+
+        public byte[] GetUserImage(int id)
+        {
+            var result = _userRepository.GetAll().Where(p => p.Id == id) .SingleOrDefault();
+            return result == null ? null : result.Image;
+
         }
     }
 }

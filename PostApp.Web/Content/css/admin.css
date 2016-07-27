@@ -1,3 +1,4 @@
+
 .mail-box {
     border-collapse: collapse;
     border-spacing: 0;
@@ -13,7 +14,7 @@
     vertical-align: top;
 }
 .mail-box .sm-side {
-    background: none repeat scroll 0 0 #e5e8ef;
+    background: none repeat scroll 0 0 #00a9ff;
     border-radius: 4px 0 0 4px;
     width: 18%;
 }
@@ -97,8 +98,8 @@ ul.inbox-nav li a {
     width: 100%;
 }
 ul.inbox-nav li a:hover, ul.inbox-nav li.active a, ul.inbox-nav li a:focus {
-    background: none repeat scroll 0 0 #d5d7de;
-    color: #6a6a6a;
+    background: none repeat scroll 0 0 #87e2e7;
+    color: #ff6c60;
 }
 ul.inbox-nav li a i {
     color: #6a6a6a;
